@@ -7,7 +7,7 @@ def bfs(g, start):
         if node not in visited:
             print(node, end=' ')
             visited.append(node)
-            stack.extend(reversed(g[node]))  # Fixed missing parenthesis
+            stack.extend(reversed(g[node]))
 
 g = {
     'A': ['B', 'C'],
