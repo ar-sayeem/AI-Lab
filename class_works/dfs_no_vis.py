@@ -5,7 +5,7 @@ def dfs(Graph, start):
     while stack:
         cost, current, path = stack.pop()
 
-        if len(path) == 4:
+        if len(path) == 4:    // based on question tree
             paths.append((cost,current, path))
 
         for neighbor, edge_cost in Graph[current].items():
