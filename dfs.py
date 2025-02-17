@@ -1,13 +1,13 @@
-def bfs(g, start):
+def dfs(g, start):
     stack = [start]
     visited = []
     
     while stack:
-        node = stack.pop()
+        node = stack.pop()  # LIFO behavior
         if node not in visited:
             print(node, end=' ')
             visited.append(node)
-            stack.extend(reversed(g[node]))
+            stack.extend(reversed(g[node]))  # Reverse to maintain order
 
 g = {
     'A': ['B', 'C'],
@@ -20,4 +20,4 @@ g = {
 }
 
 print(g)
-bfs(g, 'A')
+dfs(g, 'A')  # Expected output: A B D E C F G
