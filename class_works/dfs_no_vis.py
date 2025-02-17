@@ -1,3 +1,29 @@
+def dfs(Graph, start):
+    stack = [(0, start, [start])]  # (cost, node, path)
+    paths = []
+
+    while stack:
+        cost, current, path = stack.pop()
+
+        if len(path) == 4:
+            paths.append((cost,current, path))
+
+        for neighbor, edge_cost in Graph[current].items():
+            stack.append((cost + edge_cost, neighbor, path + [neighbor]))
+
+    # Display all paths of length 4
+    print("All paths of length 4:")
+    for path in paths:
+        print(path)
+
+    # Find and print the shortest path
+    if paths:
+        shortest_path = min(paths)  # Automatically sorts by cost
+        print("\nShortest path:", shortest_path)
+    else:
+        print("No valid path of length 4 found.")
+
+# Example Graph
 Graph = {
     'A': {'B': 1, 'C': 2},
     'B': {'D': 1, 'E': 3},
@@ -6,24 +32,14 @@ Graph = {
     'E': {'J': 3, 'K': 5},
     'F': {'L': 2, 'M': 4},
     'G': {'N': 4, 'O': 3},
-    'H': {}, 'I': {}, 'J': {}, 'K': {}, 'L': {}, 'M': {}, 'N': {}, 'O': {}
+    'H': {},
+    'I': {},
+    'J': {},
+    'K': {},
+    'L': {},
+    'M': {},
+    'N': {},
+    'O': {}
 }
 
-def dfs_shortest_leaf(graph, start):
-    stack = [(start, 0, [start])]
-    shortest_path, min_cost = None, float('inf')
-    
-    while stack:
-        node, cost, path = stack.pop()
-        if not graph[node]:
-            if cost < min_cost:
-                min_cost, shortest_path = cost, path
-        else:
-            for neighbor, weight in graph[node].items():
-                stack.append((neighbor, cost + weight, path + [neighbor]))
-    
-    return shortest_path, min_cost
-
-path, cost = dfs_shortest_leaf(Graph, 'A')
-print("Shortest DFS Path:", " -> ".join(path))
-print("Total Cost:", cost)
+dfs(Graph, 'A')
