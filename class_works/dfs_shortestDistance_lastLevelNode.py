@@ -5,11 +5,12 @@ def dfs(Graph, start):
     while stack:
         cost, current, path = stack.pop()
 
-        if len(path) == 4:    // based on question tree
-            paths.append((cost,current, path))
+        if len(path) == 4:
+            paths.append((cost, current, path))
 
         for neighbor, edge_cost in Graph[current].items():
             stack.append((cost + edge_cost, neighbor, path + [neighbor]))
+            # print(stack)       # stack go through
 
     # Display all paths of length 4
     print("All paths of length 4:")
@@ -22,6 +23,7 @@ def dfs(Graph, start):
         print("\nShortest path:", shortest_path)
     else:
         print("No valid path of length 4 found.")
+
 
 # Example Graph
 Graph = {
