@@ -5,7 +5,7 @@ def dfs(Graph, start):
     while stack:
         cost, current, path = stack.pop()
 
-        if len(path) == 4:
+        if len(path) == 4:          # Distance between RootNode -> LastLevelNode
             paths.append((cost, current, path))
 
         for neighbor, edge_cost in Graph[current].items():
@@ -23,7 +23,6 @@ def dfs(Graph, start):
         print("\nShortest path:", shortest_path)
     else:
         print("No valid path of length 4 found.")
-
 
 # Example Graph
 Graph = {
