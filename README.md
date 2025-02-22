@@ -2,7 +2,7 @@
 
 ## 1. Objectives
 
-- Understand and implement **A* Search** and **Best First Search (GBFS)** algorithms.
+- Understand and implement **A\* Search** and **Best First Search (GBFS)** algorithms.
 - Analyze and compare these algorithms with **Breadth-First Search (BFS)** and **Depth-First Search (DFS)**.
 - Evaluate their efficiency in terms of time complexity, optimality, and space utilization.
 
@@ -23,7 +23,7 @@ Search algorithms are fundamental in **Artificial Intelligence** for **pathfindi
 
 ## 3. Lab Work Implementation
 
-### **A* Search Algorithm**
+### **A\* Search Algorithm**
 
 **Logic:**
 - Uses a **priority queue (heapq)** to always expand the most promising node based on **f(n) = g(n) + h(n)**.
@@ -126,20 +126,20 @@ def dfs(graph, start, goal):
 
 | Algorithm           | Uses Heuristic? | Guarantees Shortest Path? | Space Complexity | Completeness |
 |---------------------|----------------|---------------------------|------------------|--------------|
-| **A***             | ✅ Yes         | ✅ Yes                    | High             | ✅ Yes        |
+| **A\***             | ✅ Yes         | ✅ Yes                    | High             | ✅ Yes        |
 | **Best First Search** | ✅ Yes         | ❌ No                     | Medium           | ❌ No        |
 | **BFS**            | ❌ No          | ✅ Yes                    | High             | ✅ Yes        |
 | **DFS**            | ❌ No          | ❌ No                     | Low              | ❌ No        |
 
 ### **Observations:**
-1. **A* finds the shortest path** most efficiently but requires **more memory**.
+1. **A\* finds the shortest path** most efficiently but requires **more memory**.
 2. **Best First Search is fast** but can get trapped in **local minima**.
 3. **BFS guarantees the shortest path** in unweighted graphs but is **slower than A***.
 4. **DFS is better for deep searches** but **is not guaranteed** to find the optimal path.
 
 ## 5. Discussion and Conclusion
 
-- **A* Search** is the best choice when **efficiency and accuracy** are required, making it widely used in **robotics, navigation, and AI decision-making**.
+- **A\* Search** is the best choice when **efficiency and accuracy** are required, making it widely used in **robotics, navigation, and AI decision-making**.
 - **Best First Search** is suitable for **quick searches** but does not always find the optimal solution.
 - **BFS is preferred when shortest paths** are needed in **unweighted graphs**.
 - **DFS is useful for deep exploration** but may not be the best for pathfinding.
