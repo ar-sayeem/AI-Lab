@@ -24,7 +24,7 @@ heuristic = {
 def best_first_search(graph, start, goal, heuristic):
     priority_queue = [(heuristic[start], start, [start])]
     visited = set()
-    print(priority_queue)
+    #print(priority_queue)
 
     while priority_queue:
         _, node, path = heappop(priority_queue)
@@ -35,7 +35,7 @@ def best_first_search(graph, start, goal, heuristic):
             visited.add(node)
             for neighbor in graph.get(node, {}):
                 heappush(priority_queue, (heuristic[neighbor], neighbor, path + [neighbor]))
-                print(priority_queue)
+                #print(priority_queue)
     return None
 
 # Perform Best First Search
