@@ -1,4 +1,4 @@
-# Implementation of A* Search and Best First Search Algorithm
+# Implementation of A* search and Best First Search algorithm and differentiate with BFS and DFS. 
 
 ## 1. Objectives
 
@@ -10,7 +10,7 @@
 
 Search algorithms are fundamental in **Artificial Intelligence** for **pathfinding and decision-making**.
 
-- **A* Search**: Uses both cost (**g(n)**) and heuristic (**h(n)**) to find the optimal path efficiently.
+- **A\* Search**: Uses both cost (**g(n)**) and heuristic (**h(n)**) to find the optimal path efficiently.
 - **Best First Search (GBFS)**: A greedy algorithm that selects nodes based on the heuristic function alone, often leading to faster but non-optimal solutions.
 - **Breadth-First Search (BFS)**: Explores all paths level by level, guaranteeing the shortest path in unweighted graphs.
 - **Depth-First Search (DFS)**: Explores deeply before backtracking, which is memory-efficient but may not find the best solution.
