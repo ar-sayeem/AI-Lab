@@ -51,6 +51,7 @@ def a_star(graph, start, goal, heuristic):
     
     return None
 ```
+![A* Search](https://github.com/ar-sayeem/AI-Lab/blob/main/LabReports/A_starSearch.png)
 
 ### **Best First Search Algorithm**
 
@@ -77,6 +78,7 @@ def best_first_search(graph, start, goal, heuristic):
     
     return None
 ```
+![Best First Search](https://github.com/ar-sayeem/AI-Lab/blob/main/LabReports/BestFirstSearch.png)
 
 ### **Breadth-First Search Algorithm**
 
@@ -99,6 +101,7 @@ def bfs(graph, start, goal):
     
     return None
 ```
+![Breadth First Search](https://github.com/ar-sayeem/AI-Lab/blob/main/LabReports/breadth_first_search.png)
 
 ### **Depth-First Search Algorithm**
 
@@ -119,6 +122,7 @@ def dfs(graph, start, goal):
     
     return None
 ```
+![Depth First Search](https://github.com/ar-sayeem/AI-Lab/blob/main/LabReports/depth_first_search.png)
 
 ## 4. Result Analysis and Comparison
 
@@ -154,4 +158,4 @@ Thus, **A* Search remains the most reliable algorithm** for optimal pathfinding 
 
 ---
 
-[GitHub Repository for Full Code](https://github.com/ar-sayeem/AI-Lab)
+[GitHub Repository for Full Code](https://github.com/ar-sayeem/AI-Lab/tree/main/codes_with_visualization)
