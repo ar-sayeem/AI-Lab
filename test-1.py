@@ -1,28 +1,25 @@
 def dfs_total_cost(graph):
-    total_cost = sum(sum(edges.values()) for edges in graph.values())
+    total_cost = 0
+    for node in graph:
+        total_cost += sum(graph[node].values())
     return total_cost
 
 
 def dfs(graph, start):
-    stack = [(0, start, [start])]  # (cost, node, path)
+    stack = [(0, start, [start])]
     paths = []
 
     while stack:
         cost, current, path = stack.pop()
 
-        if not graph[current]:  # If leaf node
+        if not graph[current]:
             paths.append((cost, path))
 
         for neighbor, edge_cost in graph[current].items():
             stack.append((cost + edge_cost, neighbor, path + [neighbor]))
 
-    # print("All paths to leaf nodes:")
-    # for cost, path in paths:
-    #     print("Path:", path, "Cost:", cost)
-
-    # Find and print the shortest path
     if paths:
-        min_cost, min_path = min(paths)  # Automatically sorts by cost
+        min_cost, min_path = min(paths)
         print("\nMinimum cost path:", min_path, "with cost:", min_cost)
     else:
         print("No valid path found.")
