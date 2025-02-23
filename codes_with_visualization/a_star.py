@@ -1,4 +1,4 @@
-import heapq
+import heapq            # priority queue
 import networkx as nx
 import matplotlib.pyplot as plt
 
