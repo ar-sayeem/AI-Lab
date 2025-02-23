@@ -20,7 +20,7 @@ def dfs(graph, start):
 
     if paths:
         min_cost, min_path = min(paths)
-        print("\nMinimum cost path:", min_path, "with cost:", min_cost)
+        print("\nMinimum cost path:", min_path, "Cost:", min_cost)
     else:
         print("No valid path found.")
 
