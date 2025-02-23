@@ -1,4 +1,4 @@
-# Implementation of A* search and Best First Search algorithm and differentiate with BFS and DFS. 
+# Implementation of A* Search and Best First Search Algorithm andD ifferentiate with BFS and DFS. 
 
 ## 1. Objectives
 
