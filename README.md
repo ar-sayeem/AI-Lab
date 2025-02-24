@@ -78,7 +78,7 @@ def best_first_search(graph, start, goal, heuristic):
     
     return None
 ```
-![Best First Search](https://github.com/ar-sayeem/AI-Lab/blob/main/LabReports/BestFirstSearch.png)
+![Best First Search](https://github.com/ar-sayeem/AI-Lab/blob/main/LabReports/best_first_search.png)
 
 ### **Breadth-First Search Algorithm**
 
@@ -130,7 +130,7 @@ def dfs(graph, start, goal):
 
 | Algorithm           | Uses Heuristic? | Guarantees Shortest Path? | Space Complexity | Completeness |
 |---------------------|----------------|---------------------------|------------------|--------------|
-| **A\***             | ✅ Yes         | ✅ Yes                    | High             | ✅ Yes        |
+| **A\* Search**        | ✅ Yes         | ✅ Yes                    | High             | ✅ Yes        |
 | **Best First Search** | ✅ Yes         | ❌ No                     | Medium           | ❌ No        |
 | **BFS**            | ❌ No          | ✅ Yes                    | High             | ✅ Yes        |
 | **DFS**            | ❌ No          | ❌ No                     | Low              | ❌ No        |
@@ -149,11 +149,11 @@ def dfs(graph, start, goal):
 - **DFS is useful for deep exploration** but may not be the best for pathfinding.
 
 ### **Final Conclusion**
-Thus, **A* Search remains the most reliable algorithm** for optimal pathfinding in AI applications.
+Thus, **A\* Search remains the most reliable algorithm** for optimal pathfinding in AI applications.
 
 ## 6. References
 - Stuart Russell, Peter Norvig - *Artificial Intelligence: A Modern Approach*
-- Wikipedia: *A* Search Algorithm
+- Wikipedia: *A\* Search Algorithm*
 - GeeksforGeeks: *Best First Search Algorithm*
 
 ---
